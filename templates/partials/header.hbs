@@ -1,0 +1,112 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/responsive.css">
+<link rel="stylesheet" href="/css/animate.css">
+<link rel="stylesheet" href="/css/slr.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="/js/jquery-2.2.4.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/wow.min.js"></script>
+<script src="/js/jquery.easeScroll.js"></script>
+<script src="/js/nav_script.js"></script>
+<script src="/js/jquery.flexisel.js"></script>
+
+<script>
+$(document).ready(function(){		
+  $("#flexiselDemo3").flexisel({
+	visibleItems: 4,
+	itemsToScroll: 1,         
+	autoPlay: {
+		enable: true,
+		interval: 5000,
+		pauseOnHover: true
+		}        
+  });
+  $('.main_nav li a img').click(function() {
+	$('.search_containWrap').fadeIn(300).addClass('activeSearchContain');
+  });
+  $('.search_containWrap b').click(function() {
+	$('.search_containWrap').fadeOut(300).removeClass('activeSearchContain');
+  });	
+  $('.listingMain:nth-child(even)').addClass('listingEven');
+  $(window).resize(function() {
+    location.reload();
+  });
+});
+new WOW().init();
+wow = new WOW(
+    {
+		boxClass:     'wow',      // default
+		animateClass: 'animated', // default
+		offset:       0,          // default
+		mobile:       true,       // default
+		live:         true        // default
+    }
+)
+$("html").easeScroll(0);
+</script>
+</head>
+<body>
+<!------- header -------->
+<header>
+	<div class="big_container">
+		<div class="headerInner">
+			<a href="#" class="headerLogo"><img src="/img/main_logo.png"></a>
+			<span class="toggle_icon"><b></b></span>
+			<ul class="main_nav">
+				<li><a href="/">Home</a></li>
+				<li><a href="/about">About us</a>
+					<ul class="sub-menu">
+						<li><a href="#">sublink 01</a></li>
+						<li><a href="#">sublink 02</a></li>
+						<li><a href="#">sublink 03</a></li>
+						<li><a href="#">sublink 04</a></li>
+					</ul>
+				</li>
+				<li><a href="/help">help</a></li>
+				<li><a href="#">game</a>
+					<ul class="sub-menu">
+						<li><a href="#">sublink 01</a></li>
+						<li><a href="#">sublink 02</a></li>
+						<li><a href="#">sublink 03</a></li>
+						<li><a href="#">sublink 04</a></li>
+					</ul>
+				</li>
+				<li><a href="#">NBA</a></li>
+				<li><a href="#">NHL</a></li>
+				<li><a href="#">off season</a></li>
+				<li><a href="#">product</a>
+					<ul class="sub-menu">
+						<li><a href="#">sublink 01</a></li>
+						<li><a href="#">sublink 02</a></li>
+						<li><a href="#">sublink 03</a></li>
+						<li><a href="#">sublink 04</a></li>
+					</ul>
+				</li>
+				<li><a href="#">about</a></li>
+				<li><a href="#">account</a></li>
+				<li><a href="javascript:;"><img src="/img//search.png"></a></li>
+			</ul>
+			<div class="headerBtnGrp">
+				<a href="#" class="hbtn_02">login</a>
+				<a href="#" class="hbtn_01">join now</a>
+			</div>
+		</div>
+	</div>
+	
+	<!--div class="search_containWrap">
+	  <b>X</b>
+		<div class="search_box_main">
+			<form>
+				<input type="text" class="searchPanel" placeholder="Search..." />
+				<input type="submit" class="searchBtn" value="go" />
+			</form>
+		</div>
+	</div -->
+	
+</header>

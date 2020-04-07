@@ -1,0 +1,114 @@
+/******************sld******************/
+
+.nbs-flexisel-container {
+    position:relative;
+    max-width:100%;
+}
+.nbs-flexisel-ul {
+    position:relative;
+    width:99999px;
+    margin:0px;
+    padding:0px;
+    list-style-type:none;
+	float:left;
+}
+
+.company_logo_slider_wrap .nbs-flexisel-inner {
+    padding: 0px 0px 0px 21px;	
+}
+
+.nbs-flexisel-inner {
+    position: relative;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    padding: 0px 0px 0px 0px;
+}
+
+.nbs-flexisel-item {
+    float: left;
+    margin: 0px;
+    padding: 0 0px;
+    position: relative;
+}
+
+/*** Navigation ***/
+
+
+
+
+.nbs-flexisel-nav-right {
+    padding: 1px 16px;
+    border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    position: absolute;
+    cursor: pointer;
+    z-index: 4;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fefefe;
+    color: #323232;
+    font-family: Poppins;
+    font-size: 30px !important;
+    transition: 0.2s ease-in-out;
+    border: 2px solid #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nbs-flexisel-nav-right:hover{
+    background: #9b32b3;
+    color: #fff;
+}
+
+.nbs-flexisel-nav-left{
+    padding: 1px 16px;
+    border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    position: absolute;
+    cursor: pointer;
+    z-index: 4;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fefefe;
+    color: #323232;
+    font-family: Poppins;
+    font-size: 30px !important;
+    transition: 0.2s ease-in-out;
+    border: 2px solid #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nbs-flexisel-nav-left:hover{
+    background: #9b32b3;
+    color: #fff;
+}
+
+.nbs-flexisel-nav-left {
+    left: 10px;
+}
+
+.nbs-flexisel-nav-left:before {
+    content: "<"
+}
+
+.nbs-flexisel-nav-left.disabled {
+    opacity: 0.4;
+}
+
+.nbs-flexisel-nav-right {
+    right: 5px;
+}
+
+.nbs-flexisel-nav-right:before {
+    content: ">"
+}
+
+.nbs-flexisel-nav-right.disabled {
+    opacity: 0.4;
+}
+
+
+
+/*********************************slr**************************/
