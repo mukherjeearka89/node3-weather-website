@@ -6,7 +6,7 @@ const forecast = require('./utils/forecast')
 
 
 const app = express()
-
+const port = process.env.PORT || 3000
 /// in oder to get the path of the file / ofolder we need some strig manupulation
 //console.log(path.join(__dirname,'../public'))
 
@@ -141,6 +141,6 @@ app.get('*',(req,res)=>{
 // })
 
 // to start the server
-app.listen(3000,()=>{
-    console.log('Server is runing on port 3000')
+app.listen(port,()=>{
+    console.log('Server is runing on port '+port)
 })
