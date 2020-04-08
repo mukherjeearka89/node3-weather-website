@@ -1,5 +1,10 @@
 const request = require('request')
+const temperatureConverter = (valNum) =>{
+    valNum = parseFloat(valNum)
+     valNum = (valNum-32) / 1.8
+     return valNum.toFixed(2)
 
+}
 const forecast = (latitude, longitude, callback) => {
     //const url = 'https://api.darksky.net/forecast/9d1465c6f3bb7a6c71944bdd8548d026/' + latitude + ',' + longitude
     const url = 'https://api.darksky.net/forecast/808beda40c88ee8b365e1489b17635cf/'+latitude+','+longitude // see the darkweb api documentation to pass various parameters
@@ -10,7 +15,8 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback('Unable to find location', undefined)
         } else {
-            callback(undefined, body.daily.data[0].summary + ' It is currently ' + body.currently.temperature + ' degress out. There is a ' + body.currently.precipProbability + '% chance of rain.')
+            const locationTemp = temperatureConverter(body.currently.temperature)
+            callback(undefined, body.daily.data[0].summary + ' It is currently ' + locationTemp + ' degress out. There is a ' + body.currently.precipProbability + '% chance of rain.')
         }
     })
 }
